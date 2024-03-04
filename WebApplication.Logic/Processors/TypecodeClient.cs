@@ -2,6 +2,7 @@
 using System.Text.Json.Serialization;
 using WebApplication.Logic.Interfaces;
 using WebApplication.Logic.Models;
+using WebApplication.Logic.Models.Requests;
 
 namespace WebApplication.Logic.Processors
 {
@@ -14,34 +15,39 @@ namespace WebApplication.Logic.Processors
             _baseUrl = baseUrl;
         }
 
-        public List<Album> GetAlbums(int userId)
+        public Task<List<Album>> GetAlbums(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public List<Comment> GetComments(int postId)
+        public Task<List<Comment>> GetComments(int postId)
         {
             throw new NotImplementedException();
         }
 
-        public List<Note> GetNotes(int userId)
+        public Task<List<Note>> GetNotes(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public List<Photo> GetPhotos(int albumId)
+        public async Task<List<Photo>> GetPhotos(int albumId = 0)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest photoRequest = new GetPhotoRequest(albumId);
+            return await GetData<Photo>(photoRequest);
+            
         }
 
-        public List<Post> GetPosts(int userId)
+        public async Task<List<Post>> GetPosts(int userId = 0)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest postRequest = new GetPostRequest(userId);
+            return await GetData<Post>(postRequest);
+           
         }
 
-        public List<User> GetUser(string name)
+        public async Task<List<User>> GetUser(string name)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest userRequest = new GetUserRequest(name);
+            return await GetData<User>(userRequest);
         }
 
         private async Task<List<TData>> GetData<TData>(ITypeCodeRequest request)
