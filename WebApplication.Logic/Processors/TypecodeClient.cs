@@ -25,9 +25,10 @@ namespace WebApplication.Logic.Processors
             throw new NotImplementedException();
         }
 
-        public Task<List<Note>> GetNotes(int userId)
+        public async Task<List<Note>> GetNotes(int userId = 0)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest todosRequest = new GetNotesRequest(userId);
+            return await GetData<Note>(todosRequest);
         }
 
         public async Task<List<Photo>> GetPhotos(int albumId = 0)
