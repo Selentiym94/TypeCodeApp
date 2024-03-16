@@ -7,23 +7,22 @@ using WebApplication.Logic.Interfaces;
 
 namespace WebApplication.Logic.Models.Requests
 {
-    public class GetCommentRequest : ITypeCodeRequest
+    public class GetAlbumRequest : ITypeCodeRequest
     {
-        public int PostId { get; set; }
-
-        public GetCommentRequest(int postId)
+        public int UserId { get; set; }
+        public GetAlbumRequest(int userId)
         {
-            PostId = postId;
+            UserId = userId;
         }
+
         public string GetUrlParams()
         {
-            string result = "comments";
-            if (PostId > 0)
+            string result = "album";
+            if (UserId != 0)
             {
-                result += $"postId={PostId}";
+                result += $"?userId={UserId}";
             }
             return result;
-
         }
     }
 }

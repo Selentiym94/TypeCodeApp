@@ -15,14 +15,16 @@ namespace WebApplication.Logic.Processors
             _baseUrl = baseUrl;
         }
 
-        public Task<List<Album>> GetAlbums(int userId)
+        public async Task<List<Album>> GetAlbums(int userId = 0)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest albumsRequest = new  GetAlbumRequest(userId);
+            return await GetData<Album>(albumsRequest); 
         }
 
-        public Task<List<Comment>> GetComments(int postId)
+        public async Task<List<Comment>> GetComments(int postId)
         {
-            throw new NotImplementedException();
+            ITypeCodeRequest commentRequest =new GetCommentRequest(postId);
+            return await GetData<Comment>(commentRequest);
         }
 
         public async Task<List<Note>> GetNotes(int userId = 0)

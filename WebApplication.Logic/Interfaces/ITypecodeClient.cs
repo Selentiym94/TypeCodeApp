@@ -4,11 +4,11 @@ namespace WebApplication.Logic.Interfaces
 {
     public  interface ITypecodeClient
     {
-        List<User> GetUser(string name);
-        List<Album> GetAlbums(int userId);
-        List<Note> GetNotes(int userId);
-        List<Post> GetPosts(int userId);
-        List<Comment> GetComments(int postId);
-        List<Photo> GetPhotos(int albumId);
+        Task<List<User>> GetUser(string name);
+        Task<List<Album>> GetAlbums(int userId);
+        Task<List<Note>> GetNotes(int userId);
+        Task<List<Post>> GetPosts(int userId);
+        Task<List<Comment>> GetComments(int postId);
+        Task<List<Photo>> GetPhotos(int albumId);
     }
 }
