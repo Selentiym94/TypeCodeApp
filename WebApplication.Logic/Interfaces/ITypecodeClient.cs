@@ -1,6 +1,6 @@
-﻿using WebApplication.Logic.Models;
+﻿using WebApplication1.Logic.Models;
 
-namespace WebApplication.Logic.Interfaces
+namespace WebApplication1.Logic.Interfaces
 {
     public  interface ITypecodeClient
     {

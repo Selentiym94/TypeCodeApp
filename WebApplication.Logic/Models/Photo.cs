@@ -1,4 +1,4 @@
-﻿namespace WebApplication.Logic.Models
+﻿namespace WebApplication1.Logic.Models
 {
     public class Photo
     {

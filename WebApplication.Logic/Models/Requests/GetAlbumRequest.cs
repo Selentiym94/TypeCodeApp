@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication.Logic.Interfaces;
+using WebApplication1.Logic.Interfaces;
 
-namespace WebApplication.Logic.Models.Requests
+namespace WebApplication1.Logic.Models.Requests
 {
     public class GetAlbumRequest : ITypeCodeRequest
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication.Logic.Models
+namespace WebApplication1.Logic.Models
 {
     public class Post
     {

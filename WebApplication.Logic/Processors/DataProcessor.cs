@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using WebApplication.Logic.Interfaces;
-using WebApplication.Logic.Models;
+using WebApplication1.Logic.Interfaces;
+using WebApplication1.Logic.Models;
 
-namespace WebApplication.Logic.Processors
+namespace WebApplication1.Logic.Processors
 {
     public class DataProcessor
     {

@@ -1,6 +1,6 @@
-﻿using WebApplication.Logic.Interfaces;
+﻿using WebApplication1.Logic.Interfaces;
 
-namespace WebApplication.Logic.Models.Requests
+namespace WebApplication1.Logic.Models.Requests
 {
     public class GetUserRequest : ITypeCodeRequest
     {

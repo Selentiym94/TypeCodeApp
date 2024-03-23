@@ -1,4 +1,4 @@
-﻿namespace WebApplication.Logic.Interfaces
+﻿namespace WebApplication1.Logic.Interfaces
 {
     public interface ITypeCodeRequest
     {

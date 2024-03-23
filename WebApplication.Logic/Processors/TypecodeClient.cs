@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
-using WebApplication.Logic.Interfaces;
-using WebApplication.Logic.Models;
-using WebApplication.Logic.Models.Requests;
+using WebApplication1.Logic.Interfaces;
+using WebApplication1.Logic.Models;
+using WebApplication1.Logic.Models.Requests;
 
-namespace WebApplication.Logic.Processors
+namespace WebApplication1.Logic.Processors
 {
     public class TypecodeClient: ITypecodeClient
     {
