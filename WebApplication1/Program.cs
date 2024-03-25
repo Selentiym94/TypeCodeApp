@@ -12,7 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ITypecodeClient, TypecodeClient>();
+
+string baseURl = builder.Configuration.GetSection("BaseUrl").Get<string>();
+builder.Services.AddSingleton<ITypecodeClient, TypecodeClient>(t => new TypecodeClient(baseURl));
 builder.Services.AddSingleton<DataProcessor>();
 
 var app = builder.Build();

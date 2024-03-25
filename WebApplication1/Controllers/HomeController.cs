@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Logic.Processors;
 
 namespace WebApplication1.Controllers
 {
@@ -6,8 +7,10 @@ namespace WebApplication1.Controllers
     [Route("[controller]")]
     public class HomeController : ControllerBase
     {
-        public HomeController()
+        private readonly DataProcessor _dataProcessor;
+        public HomeController(DataProcessor dataProcessor)
         {
+            _dataProcessor = dataProcessor;
         }
 
 
