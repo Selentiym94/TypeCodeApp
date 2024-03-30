@@ -1,4 +1,5 @@
-﻿namespace WebApplication1.Logic.Models
+﻿
+namespace WebApplication1.Logic.Models
 {
     public class AlbumData
     {

@@ -20,7 +20,7 @@ namespace WebApplication1.Logic.Models.Requests
             string result = "comments";
             if (PostId > 0)
             {
-                result += $"postId={PostId}";
+                result += $"?postId={PostId}";
             }
             return result;
 

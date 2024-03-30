@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using WebApplication1.Logic.Interfaces;
+﻿using WebApplication1.Logic.Interfaces;
 using WebApplication1.Logic.Models;
 
 namespace WebApplication1.Logic.Processors
@@ -34,7 +28,7 @@ namespace WebApplication1.Logic.Processors
             List<Album> albums = await _client.GetAlbums(userId);
             foreach (Album album in albums)
             {
-                List<Photo> photos = await _client.GetPhotos(userId);
+                List<Photo> photos = await _client.GetPhotos(album.Id);
                 AlbumData data = new AlbumData(album, photos);
                 result.Add(data);
             }
@@ -46,7 +40,7 @@ namespace WebApplication1.Logic.Processors
             List<Post> posts = await _client.GetPosts(userId);
             foreach (Post post in posts)
             {
-                List<Comment> comments = await _client.GetComments(userId);
+                List<Comment> comments = await _client.GetComments(post.Id);
                 PostData data = new PostData(post, comments);
                 result.Add(data);
             }

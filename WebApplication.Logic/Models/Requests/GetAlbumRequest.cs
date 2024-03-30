@@ -17,7 +17,7 @@ namespace WebApplication1.Logic.Models.Requests
 
         public string GetUrlParams()
         {
-            string result = "album";
+            string result = "albums";
             if (UserId != 0)
             {
                 result += $"?userId={UserId}";
