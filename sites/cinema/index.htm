@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="content">
+            <div class="info">
+                <p>
+                Присоединяйся к нам на вечер кино, наполненный
+                попкорном, смехом и отличной компанией! Являетесь
+                ли вы поклонником захватывающих боевиков, 
+                сериалов, трогатетельных драм, у нас есть кино 
+                на любой вкус. Запишитесь на показ и принесите
+                свои любимые закуски, чтобы сделать этот вечер
+                незабываемым.
+                </p>
+                <button class="btn">ПРИСОЕДИНИТЬСЯ</button>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="./1.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.5</span>
+                            <h2>ход королевы</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./2.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.1</span>
+                            <h2>Уэнсдей</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./3.jpg" alt="">
+                        <div class="overlay">
+                            <span>7.9</span>
+                            <h2>Стражи галактики</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./4.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.2</span>
+                            <h2>Шрек</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./5.jpg" alt="">
+                        <div class="overlay">
+                            <span>9.0</span>
+                            <h2>Гравити Фолз</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./6.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.9</span>
+                            <h2>Друзья</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./7.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.2</span>
+                            <h2>Сверхъестественное</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./8.jpg" alt="">
+                        <div class="overlay">
+                            <span>8.7</span>
+                            <h2>Доктор Хаус</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./9.jpg" alt="">
+                        <div class="overlay">
+                            <span>9.2</span>
+                            <h2>Игра престолов</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+    </section>
+
+   
+</body>
+<script>
+    var swiper = new Swiper(".swiper", {
+    effect: "cards",
+    grabCursor: true,
+    initialSlide: 2,
+    speed: 500,
+    loop: true,
+    rotate: true,
+    mousewheel: {
+    invert: false,
+  },
+});
+</script>
+
+
+</html>

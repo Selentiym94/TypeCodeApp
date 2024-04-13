@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{AB39F71E-896F-4CFD-A73B-1E49D4CF7AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{AB39F71E-896F-4CFD-A73B-1E49D4CF7AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication.Logic", "WebApplication.Logic\WebApplication.Logic.csproj", "{20FD7281-8382-4258-9FCE-A78A40CA0F50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Logic", "WebApplication.Logic\WebApplication.Logic.csproj", "{20FD7281-8382-4258-9FCE-A78A40CA0F50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sites", "sites", "{B23D41EA-8449-46A3-85C7-10489D3787D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
