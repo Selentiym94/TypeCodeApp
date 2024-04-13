@@ -39,7 +39,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onload="AppModule.events.onLoad()">
 
   <!-- 
     - #PRELOADER
@@ -49,10 +49,6 @@
     <div class="circle"></div>
     <p class="text">Grilli</p>
   </div>
-
-
-
-
 
   <!-- 
     - #TOP BAR
@@ -101,10 +97,6 @@
 
     </div>
   </div>
-
-
-
-
 
   <!-- 
     - #HEADER
@@ -787,9 +779,9 @@
               </p>
 
               <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
+                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field" onchange="AppModule.events.onChange.name(value)">
 
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field" onchange="AppModule.events.onChange.phone(value)">
               </div>
 
               <div class="input-wrapper">
@@ -797,7 +789,7 @@
                 <div class="icon-wrapper">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
-                  <select name="person" class="input-field">
+                  <select name="person" class="input-field" onchange="AppModule.events.onChange.personCount(value)">
                     <option value="1-person">1 Person</option>
                     <option value="2-person">2 Person</option>
                     <option value="3-person">3 Person</option>
@@ -813,7 +805,7 @@
                 <div class="icon-wrapper">
                   <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
 
-                  <input type="date" name="reservation-date" class="input-field">
+                  <input type="date" name="reservation-date" class="input-field" onchange="AppModule.events.onChange.date(value)">
 
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
@@ -821,22 +813,22 @@
                 <div class="icon-wrapper">
                   <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                  <select name="person" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
+                  <select name="person" class="input-field" onchange="AppModule.events.onChange.time(value)">
+                    <option value="08:00">08 : 00</option>
+                    <option value="09:00">09 : 00</option>
+                    <option value="010:00">10 : 00</option>
+                    <option value="011:00">11 : 00</option>
+                    <option value="012:00">12 : 00</option>
+                    <option value="13:00">13 : 00</option>
+                    <option value="14:00">14 : 00</option>
+                    <option value="15:00">15 : 00</option>
+                    <option value="16:00">16 : 00</option>
+                    <option value="17:00">17 : 00</option>
+                    <option value="18:00">18 : 00</option>
+                    <option value="19:00">19 : 00</option>
+                    <option value="20:00">20 : 00</option>
+                    <option value="21:00">21 : 00</option>
+                    <option value="22:00">22 : 00</option>
                   </select>
 
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
@@ -1212,6 +1204,7 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/appmodule.js"></script>
 
   <!-- 
     - ionicon link
