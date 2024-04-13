@@ -1,6 +1,8 @@
 const AppModule = {
     events : {
         onLoad : function(){
+            debugger;
+            AppModule.Util.setDisabledElements("reservation-time", true);
             alert("OnLoad event!")
         },
         onChange:{
@@ -26,6 +28,7 @@ const AppModule = {
                 AppModule.Util.alertMessage(paramName, `${text}/${number}`);
             },
             date: function(text){
+                debugger;
                 //ToDo: проверки для введенного текста
                 //ToDo: выделить из строки дату
                 let paramName = "date";
@@ -35,6 +38,7 @@ const AppModule = {
                 }
                 AppModule.Util.setObjectData(date,paramName)
                 AppModule.Util.alertMessage(paramName, `${text}/${date}`);
+                AppModule.Util.setDisabledElements("reservation-time", false);
             },
             time: function(text){
                 debugger;
@@ -68,6 +72,18 @@ const AppModule = {
         }
     },
     Util:{
+        setDisabledElements :function(name, isDisabled){
+            let elements = document.getElementsByName(name); 
+            if(!elements || !elements.length){
+                return;
+            }
+            if(isDisabled){
+                elements.forEach(item=>item.setAttribute("disabled", isDisabled));
+            }else{
+                elements.forEach(element => element.removeAttribute("disabled"));
+            }
+            
+        },
         setObjectData: function(value, paramName){
             AppModule.Reservation[paramName] = value;
         },
