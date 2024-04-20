@@ -235,7 +235,7 @@
               Come with family & feel the joy of mouthwatering food
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal">
+            <a href="#" class="btn btn-primary slider-reveal" onclick="AppModule.events.onClick.viewMenu()">
               <span class="text text-1">View Our Menu</span>
 
               <span class="text text-2" aria-hidden="true">View Our Menu</span>
@@ -750,7 +750,7 @@
             <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
               class="img">
 
-            <p class="label-2 profile-name">Sam Jhonson</p>
+            <p class="label-2 profile-name">Владимир Жириновский</p>
           </div>
 
         </div>
@@ -836,7 +836,7 @@
 
               </div>
 
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field" onchange="AppModule.events.onChange.comment(value)"></textarea>
 
               <button type="submit" class="btn btn-secondary">
                 <span class="text text-1">Book A Table</span>

@@ -1,3 +1,4 @@
+
 const AppModule = {
     events : {
         onLoad : function(){
@@ -54,7 +55,7 @@ const AppModule = {
              comment: function(text){
                 //ToDo: проверки для введенного текста
                 let paramName = "comment"
-                AppModule.Util.setOrderData(text, paramName)
+                AppModule.Util.setObjectData(text, paramName)
                 AppModule.Util.alertMessage(paramName, text);
             }
         },
@@ -66,8 +67,12 @@ const AppModule = {
                     return;
                 }
                 alert("onClick sendOrder event!");
-                let result  =  AppModule.Service.sendData(AppModule.Order);
+                let result  =  AppModule.Service.sendData(AppModule.Reservation,'saveOrder','POST');
                 alert(result && result.success ? `${result.name}, ваш заказ зарегистрирован` : `Ошибка регистрации заказа [${result?.error}]`);
+            },
+            viewMenu:function(){
+                alert("view menu button clieck event!");
+                AppModule.Service.sendData(null, 'viewMenu', 'GET')
             }
         }
     },
@@ -103,15 +108,19 @@ const AppModule = {
     },
     Service : {
         //WARNING: должна быть включена  Cors police 
-        BaseUrl:"https://localhost:7217/Home/saveOrder",
-        sendData: function(){
+        BaseUrl:"https://localhost:7217/Home/",
+        sendData: function(data,path,method){
             debugger;
             try{
-                let data = JSON.stringify(AppModule.Reservation);
                 let request = new XMLHttpRequest();
-                request.open("POST", AppModule.Service.BaseUrl, false);
+                request.open(method, `${AppModule.Service.BaseUrl}${path}`, false);
                 request.setRequestHeader('Content-Type', 'application/json');
-                request.send(data);
+                if(data){
+                    let dataToSend = JSON.stringify(data);
+                    request.send(dataToSend);
+                }else{
+                    request.send();
+                }
                 if(request.status == 200){
                     let response = request.response;
                         if(response){
