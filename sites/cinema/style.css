@@ -49,6 +49,9 @@ section{
   margin-bottom: 20px;
   line-height: 1.5;
 }
+.noneLine{
+  text-decoration: none;
+}
 .btn{
   display: block;
   padding: 10px 40px;
@@ -56,6 +59,7 @@ section{
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 6px;
+  width: 75%;
   outline: none;
   text-decoration: none;
   color: #784ba0;
